@@ -42,7 +42,7 @@ const projects: ProjectProps[] = [
   {
     title: "Yukari",
     description: "A modern, extensible comic and manga reader for Windows. It features a plugin-based architecture for dynamic source integration and a fast, local SQLite-backed library.",
-    tags: ["C#", "WinUI 3", "MVVM", "SqLite"],
+    tags: ["C#", "WinUI 3", "MVVM", "SQLite"],
   },
 ];
 
