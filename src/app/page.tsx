@@ -39,11 +39,13 @@ const projects: ProjectProps[] = [
     title: "YT Downloader",
     description: "A program that allows you to download videos, music and playlists from YouTube.",
     tags: ["C#", "WinUI 3", "MVVM", "YoutubeExplode"],
+    githubUrl: "https://github.com/TXG0Fk3/YT-Downloader"
   },
   {
     title: "Yukari",
     description: "A modern, extensible comic and manga reader for Windows. It features a plugin-based architecture for dynamic source integration and a fast, local SQLite-backed library.",
     tags: ["C#", "WinUI 3", "MVVM", "SQLite"],
+    githubUrl: "https://github.com/Yukari-App/Yukari"
   },
 ];
 
