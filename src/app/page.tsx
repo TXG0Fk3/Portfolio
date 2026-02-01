@@ -61,7 +61,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="max-w-4xl mx-auto py-20">
+      <section className="max-w-4xl mx-auto py-10">
         <h2 className="text-4xl sm:text-6xl font-bold mb-4">
           Software Developer <br /> 
           <span className="text-zinc-500 text-3xl sm:text-5xl">& .NET Enthusiast.</span>
