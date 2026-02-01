@@ -11,7 +11,7 @@ export function ProjectCard({ title, description, tags }: ProjectProps) {
       <p className="text-zinc-400 text-sm mt-2">{description}</p>
       <div className="mt-4 flex gap-2">
         {tags.map(tag => (
-          <span key={tag} className="text-[10px] bg-zinc-800 px-2 py-1 rounded border border-zinc-700">
+          <span key={tag} className="text-[10px] bg-zinc-800 px-2 py-1 rounded border border-zinc-700 hover:bg-zinc-600 transition-colors">
             {tag}
           </span>
         ))}
