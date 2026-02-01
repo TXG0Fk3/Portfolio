@@ -4,7 +4,7 @@ export interface SkillBadgeProps {
   color?: string;
 }
 
-export function SkillBadge({ name, iconPath, color = "group-hover:bg-blue-500" }: SkillBadgeProps) {
+export function SkillBadge({ name, iconPath, color = "#3b82f6" }: SkillBadgeProps) {
   return (
     <div className="group flex items-center bg-zinc-900/50 border border-zinc-800 px-2 py-2 rounded-full cursor-default hover:border-blue-500/50 transition-all duration-300 whitespace-nowrap">
       
