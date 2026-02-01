@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SkillBadge, SkillBadgeProps } from "@/components/SkillBadge";
 import { ProjectCard, ProjectProps } from "@/components/ProjectCard";
 
@@ -61,14 +62,29 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="max-w-4xl mx-auto py-10">
-        <h2 className="text-4xl sm:text-6xl font-bold mb-4">
-          Software Developer <br /> 
-          <span className="text-zinc-500 text-3xl sm:text-5xl">& .NET Enthusiast.</span>
-        </h2>
-        <p className="text-zinc-400 max-w-lg leading-relaxed">
-          I am a Software Developer passionate about building functional and well-structured applications. My main focus is the .NET ecosystem, where I develop desktop solutions using C# and WinUI 3. I strive to apply architectural patterns like MVVM to create code that is organized and easy to maintain.
-        </p>
+      <section id="about" className="max-w-4xl mx-auto py-10 flex flex-col-reverse md:flex-row items-center gap-10">
+        <div className="flex-1">
+          <h2 className="text-4xl sm:text-6xl font-bold mb-4">
+            Software Developer <br /> 
+            <span className="text-zinc-500 text-3xl sm:text-5xl">& .NET Enthusiast.</span>
+          </h2>
+          <p className="text-zinc-400 max-w-lg leading-relaxed">
+            I am a Software Developer passionate about building functional and well-structured applications. My main focus is the .NET ecosystem, where I develop desktop solutions using C# and WinUI 3...
+          </p>
+        </div>
+
+        <div className="relative group">
+          <div className="absolute -inset-1 bg-linear-to-r from-blue-600 to-cyan-300 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+          
+          <div className="relative w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-zinc-800 bg-zinc-900 shrink-0">
+            <Image 
+              src="/pfp.jpg"
+              alt="PFP"
+              fill
+              className="object-cover hover:grayscale-0 transition-all duration-500"
+            />
+          </div>
+        </div>
       </section>
 
       <section id="skills" className="max-w-4xl mx-auto py-10">
