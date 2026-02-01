@@ -1,4 +1,5 @@
 import { SkillBadge, SkillBadgeProps } from "@/components/SkillBadge";
+import { ProjectCard, ProjectProps } from "@/components/ProjectCard";
 
 const skills: SkillBadgeProps[] = [
   { name: "C", iconPath: "/icons/c.svg", color: "#394AAB" },
@@ -32,6 +33,7 @@ const skills: SkillBadgeProps[] = [
   { name: "PowerShell", iconPath: "/icons/powershell.svg", color: "#4478D2" }
 ];
 
+const projects: ProjectProps[] = [
   {
     title: "YT Downloader",
     description: "A program that allows you to download videos, music and playlists from YouTube.",
