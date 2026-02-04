@@ -77,85 +77,91 @@ const projects: ProjectProps[] = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-zinc-50 font-sans p-8 bg-grid">
-      
-      <header className="max-w-4xl mx-auto flex justify-between items-center py-10">
-        <h1 className="text-xl font-mono font-bold tracking-tighter">
-          <span className="text-blue-500">_</span>TXG0Fk3
-        </h1>
-        <nav className="flex gap-6 text-sm text-zinc-400 font-medium">
-          <a href="#about" className="hover:text-blue-400 transition-colors">About</a>
-          <a href="#skills" className="hover:text-blue-400 transition-colors">Skills</a>
-          <a href="#projects" className="hover:text-blue-400 transition-colors">Projects</a>
-        </nav>
+    <main className="min-h-screen bg-zinc-950 text-zinc-50 font-sans bg-grid">
+      <div className="fixed top-0 -left-4 w-72 h-72 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="fixed bottom-0 -right-4 w-72 h-72 bg-purple-500/10 rounded-full blur-[120px] pointer-events-none" />
+
+      <header className="sticky top-0 z-50 w-full border-b border-zinc-800/50 bg-zinc-950/70 backdrop-blur-md">
+        <div className="max-w-4xl mx-auto flex justify-between items-center py-2 px-8">
+          <h1 className="text-xl font-mono font-bold tracking-tighter">
+            <span className="text-blue-500">_</span>TXG0Fk3
+          </h1>
+          <nav className="flex gap-6 text-sm text-zinc-400 font-medium">
+            <a href="#about" className="hover:text-blue-400 transition-colors">About</a>
+            <a href="#skills" className="hover:text-blue-400 transition-colors">Skills</a>
+            <a href="#projects" className="hover:text-blue-400 transition-colors">Projects</a>
+          </nav>
+        </div>
       </header>
       
-      <section id="about" className="max-w-4xl mx-auto py-10 flex flex-col-reverse md:flex-row items-center gap-10">
-        <div className="flex-1">
-          <h2 className="text-4xl sm:text-6xl font-bold mb-4">
-            Software Developer <br /> 
-            <span className="text-zinc-500 text-3xl sm:text-5xl">& .NET Enthusiast.</span>
-          </h2>
-          <p className="text-zinc-400 max-w-lg leading-relaxed">
-            I am a Software Developer passionate about building functional and well-structured applications. My main focus is the .NET ecosystem, where I develop desktop solutions using C# and WinUI 3...
-          </p>
+      <div className="max-w-4xl mx-auto px-8 pb-16">
+        <section id="about" className="scroll-mt-12 max-w-4xl mx-auto py-10 flex flex-col-reverse md:flex-row items-center gap-10">
+          <div className="flex-1">
+            <h2 className="text-4xl sm:text-6xl font-bold mb-4">
+              Software Developer <br /> 
+              <span className="text-zinc-500 text-3xl sm:text-5xl">& .NET Enthusiast.</span>
+            </h2>
+            <p className="text-zinc-400 max-w-lg leading-relaxed">
+              I am a Software Developer passionate about building functional and well-structured applications. My main focus is the .NET ecosystem, where I develop desktop solutions using C# and WinUI 3...
+            </p>
 
-          <div className="flex gap-4 mt-8">
-            {socials.map((social) => (
-              <SocialLink key={social.name} {...social} />
+            <div className="flex gap-4 mt-8">
+              {socials.map((social) => (
+                <SocialLink key={social.name} {...social} />
+              ))}
+            </div>
+          </div>
+
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-blue-500 rounded-full blur-xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+            
+            <div className="relative w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-zinc-800 bg-zinc-900 shrink-0 shadow-[0_0_20px_rgba(59,130,246,0.15)] group-hover:border-blue-500/50 transition-all duration-500">
+              <Image 
+                src="/pfp.jpg"
+                alt="PFP"
+                fill
+                className="object-cover transition-all duration-500"
+                priority
+              />
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" className="scroll-mt-12 max-w-4xl mx-auto py-10">
+          <h3 className="text-sm font-mono text-blue-500 mb-8 uppercase tracking-widest">
+            Tech Stack
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {skillCategories.map((category) => (
+              <div key={category.title}>
+                <h4 className="text-zinc-400 font-medium mb-3 text-sm">
+                  {category.title}
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {category.items.map((skill) => (
+                    <SkillBadge key={skill.name} {...skill} />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
-        </div>
+        </section>
 
-        <div className="relative group">
-          <div className="absolute -inset-1 bg-linear-to-r from-blue-600 to-cyan-300 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-          
-          <div className="relative w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-zinc-800 bg-zinc-900 shrink-0">
-            <Image 
-              src="/pfp.jpg"
-              alt="PFP"
-              fill
-              className="object-cover hover:grayscale-0 transition-all duration-500"
-            />
+        <section id="projects" className="scroll-mt-12 max-w-4xl mx-auto py-10">
+          <h3 className="text-sm font-mono text-blue-500 mb-8 uppercase tracking-widest">
+            Main Projects
+          </h3>
+          <div className="flex flex-col gap-2">
+            {projects.map((project) => (
+              <ProjectCard 
+                key={project.title}
+                {...project}
+              />
+            ))}
           </div>
-        </div>
-      </section>
-
-      <section id="skills" className="max-w-4xl mx-auto py-10">
-        <h3 className="text-sm font-mono text-blue-500 mb-8 uppercase tracking-widest">
-          Tech Stack
-        </h3>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {skillCategories.map((category) => (
-            <div key={category.title}>
-              <h4 className="text-zinc-400 font-medium mb-3 text-sm">
-                {category.title}
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {category.items.map((skill) => (
-                  <SkillBadge key={skill.name} {...skill} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="projects" className="max-w-4xl mx-auto py-10">
-        <h3 className="text-sm font-mono text-blue-500 mb-8 uppercase tracking-widest">
-          Main Projects
-        </h3>
-        <div className="flex flex-col gap-2">
-          {projects.map((project) => (
-            <ProjectCard 
-              key={project.title}
-              {...project}
-            />
-          ))}
-        </div>
-      </section>
-
+        </section>
+      </div>
     </main>
   );
 }
