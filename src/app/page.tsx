@@ -77,7 +77,7 @@ const projects: ProjectProps[] = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-zinc-50 font-sans p-8">
+    <main className="min-h-screen bg-zinc-950 text-zinc-50 font-sans p-8 bg-grid">
       
       <header className="max-w-4xl mx-auto flex justify-between items-center py-10">
         <h1 className="text-xl font-mono font-bold tracking-tighter">
