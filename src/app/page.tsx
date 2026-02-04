@@ -3,6 +3,11 @@ import { SocialLink, SocialLinkProps } from "@/components/SocialLinks";
 import { SkillBadge, SkillBadgeProps } from "@/components/SkillBadge";
 import { ProjectCard, ProjectProps } from "@/components/ProjectCard";
 
+interface SkillCategory {
+  title: string;
+  items: SkillBadgeProps[];
+}
+
 const socials: SocialLinkProps[] = [
   { name: "GitHub", url: "https://github.com/TXG0Fk3", iconPath: "/icons/github.svg", hoverColor: "#ffffff" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/leoverton-b-xavier-565111307/", iconPath: "/icons/linkedin.svg", hoverColor: "#0077b5" },
@@ -11,36 +16,48 @@ const socials: SocialLinkProps[] = [
   { name: "Email", url: "mailto:leovertonx12@outlook.com", iconPath: "/icons/mail.svg", hoverColor: "#ef4444" }
 ];
 
-const skills: SkillBadgeProps[] = [
-  { name: "C", iconPath: "/icons/c.svg", color: "#394AAB" },
-  { name: "C++", iconPath: "/icons/cplusplus.svg", color: "#00599C" },
-  { name: "C# / .NET", iconPath: "/icons/csharp.svg", color: "#7F5CFF" },
-  { name: "Rust", iconPath: "/icons/rust.svg", color: "#E43717" },
-  { name: "Python", iconPath: "/icons/python.svg", color: "#FFD040" },
-  { name: "TypeScript", iconPath: "/icons/typescript.svg", color: "#007ACC" },
-
-  { name: "HTML", iconPath: "/icons/html5.svg", color: "#E14E1D" },
-  { name: "CSS", iconPath: "/icons/css.svg", color: "#0277BD" },
-  { name: "Next.js", iconPath: "/icons/nextjs.svg", color: "#FFFFFF" },
-  { name: "Bun", iconPath: "/icons/bun.svg", color: "#fbf0df" },
-  { name: "Tailwind", iconPath: "/icons/tailwindcss.svg", color: "#38BDF8" },
-
-  { name: "MySQL", iconPath: "/icons/mysql.svg", color: "#FFFFFF" },
-  { name: "PostgreSQL", iconPath: "/icons/postgresql.svg", color: "#FFFFFF" },
-  { name: "SQLite", iconPath: "/icons/sqlite.svg", color: "#007AB5" },
-
-  { name: "Docker", iconPath: "/icons/docker.svg", color: "#2396ED" },
-  { name: "Git", iconPath: "/icons/git.svg", color: "#F03C2E" },
-  { name: "Nix", iconPath: "/icons/nix.svg", color: "#7EB8E2" },
-  { name: "NeoVim", iconPath: "/icons/neovim.svg", color: "#59953B" },
-  { name: "Visual Studio", iconPath: "/icons/visualstudio.svg", color: "#B857F6" },
-  { name: "VS Code", iconPath: "/icons/vscode.svg", color: "#3C99D4" },
-  { name: "Linux", iconPath: "/icons/linux.svg", color: "#ECEFF1" },
-  { name: "ArchLinux", iconPath: "/icons/archlinux.svg", color: "#1793D1" },
-  { name: "Windows", iconPath: "/icons/windows.svg", color: "#0D89DB" },
-
-  { name: "Bash", iconPath: "/icons/bash.svg", color: "#FFFFFF" },
-  { name: "PowerShell", iconPath: "/icons/powershell.svg", color: "#4478D2" }
+const skillCategories: SkillCategory[] = [
+  {
+    title: "Languages",
+    items: [
+      { name: "C", iconPath: "/icons/c.svg", color: "#394AAB" },
+      { name: "C++", iconPath: "/icons/cplusplus.svg", color: "#00599C" },
+      { name: "C#", iconPath: "/icons/csharp.svg", color: "#7F5CFF" },
+      { name: "Rust", iconPath: "/icons/rust.svg", color: "#E43717" },
+      { name: "Python", iconPath: "/icons/python.svg", color: "#FFD040" },
+      { name: "TypeScript", iconPath: "/icons/typescript.svg", color: "#007ACC" },
+    ]
+  },
+  {
+    title: "Frameworks & Web",
+    items: [
+      { name: "Next.js", iconPath: "/icons/nextjs.svg", color: "#FFFFFF" },
+      { name: "Tailwind", iconPath: "/icons/tailwindcss.svg", color: "#38BDF8" },
+      { name: "HTML", iconPath: "/icons/html5.svg", color: "#E14E1D" },
+      { name: "CSS", iconPath: "/icons/css.svg", color: "#0277BD" },
+    ]
+  },
+  {
+    title: "Database & Backend",
+    items: [
+      { name: "PostgreSQL", iconPath: "/icons/postgresql.svg", color: "#FFFFFF" },
+      { name: "SQLite", iconPath: "/icons/sqlite.svg", color: "#007AB5" },
+      { name: "MySQL", iconPath: "/icons/mysql.svg", color: "#FFFFFF" },
+      { name: "Bun", iconPath: "/icons/bun.svg", color: "#fbf0df" },
+    ]
+  },
+  {
+    title: "Dev Environment",
+    items: [
+      { name: "Nix", iconPath: "/icons/nix.svg", color: "#7EB8E2" },
+      { name: "NeoVim", iconPath: "/icons/neovim.svg", color: "#59953B" },
+      { name: "ArchLinux", iconPath: "/icons/archlinux.svg", color: "#1793D1" },
+      { name: "Linux", iconPath: "/icons/linux.svg", color: "#ECEFF1" },
+      { name: "Windows", iconPath: "/icons/windows.svg", color: "#0D89DB" },
+      { name: "Git", iconPath: "/icons/git.svg", color: "#F03C2E" },
+      { name: "Docker", iconPath: "/icons/docker.svg", color: "#2396ED" },
+    ]
+  }
 ];
 
 const projects: ProjectProps[] = [
@@ -106,11 +123,21 @@ export default function Home() {
 
       <section id="skills" className="max-w-4xl mx-auto py-10">
         <h3 className="text-sm font-mono text-blue-500 mb-8 uppercase tracking-widest">
-          Tech Skills
+          Tech Stack
         </h3>
-        <div className="flex flex-wrap gap-2">
-          {skills.map((skill) => (
-            <SkillBadge key={skill.name} {...skill}/>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {skillCategories.map((category) => (
+            <div key={category.title}>
+              <h4 className="text-zinc-400 font-medium mb-3 text-sm">
+                {category.title}
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {category.items.map((skill) => (
+                  <SkillBadge key={skill.name} {...skill} />
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
