@@ -26,3 +26,9 @@ This is my personal corner on the web. Currently in development.
 - **Framework:** [Next.js](https://nextjs.org/) (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
+
+<div align="center">
+  <h2>📜 License</h2>
+  
+This project is licensed under MIT. See the [LICENSE](LICENSE) file for details.
+</div>
