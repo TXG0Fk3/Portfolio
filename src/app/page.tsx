@@ -94,8 +94,8 @@ export default function Home() {
         </div>
       </header>
       
-      <div className="max-w-4xl mx-auto px-8 pb-16">
-        <section id="about" className="scroll-mt-12 max-w-4xl mx-auto py-10 flex flex-col-reverse md:flex-row items-center gap-10">
+      <div className="max-w-240 mx-auto p-8 pb-12">
+        <section id="about" className="scroll-mt-12 py-10 flex flex-col-reverse md:flex-row items-center gap-10">
           <div className="flex-1">
             <h2 className="text-4xl sm:text-6xl font-bold mb-4">
               Software Developer <br /> 
@@ -120,14 +120,14 @@ export default function Home() {
                 src="/pfp.jpg"
                 alt="PFP"
                 fill
-                className="object-cover transition-all duration-500"
+                className="object-cover"
                 priority
               />
             </div>
           </div>
         </section>
 
-        <section id="skills" className="scroll-mt-12 max-w-4xl mx-auto py-10">
+        <section id="skills" className="scroll-mt-12 py-10">
           <h3 className="text-sm font-mono text-blue-500 mb-8 uppercase tracking-widest">
             Tech Stack
           </h3>
@@ -148,7 +148,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="scroll-mt-12 max-w-4xl mx-auto py-10">
+        <section id="projects" className="scroll-mt-12 py-10">
           <h3 className="text-sm font-mono text-blue-500 mb-8 uppercase tracking-widest">
             Main Projects
           </h3>
