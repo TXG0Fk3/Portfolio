@@ -10,6 +10,7 @@ interface SkillCategory {
 
 const socials: SocialLinkProps[] = [
   { name: "GitHub", url: "https://github.com/TXG0Fk3", iconPath: "/icons/github.svg", hoverColor: "#ffffff" },
+  { name: "Codeberg", url: "https://codeberg.org/TXG0Fk3", iconPath: "/icons/codeberg.svg", hoverColor: "#4793CC" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/leoverton-b-xavier-565111307/", iconPath: "/icons/linkedin.svg", hoverColor: "#0077b5" },
   { name: "Discord", url: "https://discord.com/users/txg0fk3", iconPath: "/icons/discord.svg", hoverColor: "#5662F6" },
   { name: "Youtube", url: "https://www.youtube.com/@txg0fk3", iconPath: "/icons/youtube.svg", hoverColor: "#FF0033" },
@@ -93,12 +94,12 @@ export default function Home() {
           </nav>
         </div>
       </header>
-      
+
       <div className="max-w-240 mx-auto p-8 pb-12">
         <section id="about" className="scroll-mt-12 py-10 flex flex-col-reverse md:flex-row items-center gap-10">
           <div className="flex-1">
             <h2 className="text-4xl sm:text-6xl font-bold mb-4">
-              Software Developer <br /> 
+              Software Developer <br />
               <span className="text-zinc-500 text-3xl sm:text-5xl">& .NET Enthusiast.</span>
             </h2>
             <p className="text-zinc-400 max-w-lg leading-relaxed">
@@ -114,9 +115,9 @@ export default function Home() {
 
           <div className="relative group">
             <div className="absolute -inset-1 bg-blue-500 rounded-full blur-xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-            
+
             <div className="relative w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-zinc-800 bg-zinc-900 shrink-0 shadow-[0_0_20px_rgba(59,130,246,0.15)] group-hover:border-blue-500/50 transition-all duration-500">
-              <Image 
+              <Image
                 src="/pfp.jpg"
                 alt="PFP"
                 fill
@@ -131,7 +132,7 @@ export default function Home() {
           <h3 className="text-sm font-mono text-blue-500 mb-8 uppercase tracking-widest">
             Tech Stack
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {skillCategories.map((category) => (
               <div key={category.title}>
@@ -154,7 +155,7 @@ export default function Home() {
           </h3>
           <div className="flex flex-col gap-2">
             {projects.map((project) => (
-              <ProjectCard 
+              <ProjectCard
                 key={project.title}
                 {...project}
               />
