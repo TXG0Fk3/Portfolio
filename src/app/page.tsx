@@ -118,8 +118,8 @@ export default function Home() {
 
             <div className="relative w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-zinc-800 bg-zinc-900 shrink-0 shadow-[0_0_20px_rgba(59,130,246,0.15)] group-hover:border-blue-500/50 transition-all duration-500">
               <Image
-                src="/pfp.jpg"
-                alt="PFP"
+                src="/PFP.png"
+                alt="Profile Picture"
                 fill
                 className="object-cover"
                 priority
