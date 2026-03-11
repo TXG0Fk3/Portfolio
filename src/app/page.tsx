@@ -10,7 +10,7 @@ interface SkillCategory {
 
 const socials: SocialLinkProps[] = [
   { name: "GitHub", url: "https://github.com/TXG0Fk3", iconPath: "/icons/github.svg", hoverColor: "#ffffff" },
-  { name: "Codeberg", url: "https://codeberg.org/TXG0Fk3", iconPath: "/icons/codeberg.svg", hoverColor: "#4793CC" },
+  { name: "Forgejo", url: "https://fgj.txgfk.xyz/TXG0Fk3", iconPath: "/icons/forgejo.svg", hoverColor: "#CC1602" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/leoverton-b-xavier-565111307/", iconPath: "/icons/linkedin.svg", hoverColor: "#0077b5" },
   { name: "Discord", url: "https://discord.com/users/txg0fk3", iconPath: "/icons/discord.svg", hoverColor: "#5662F6" },
   { name: "Youtube", url: "https://www.youtube.com/@txg0fk3", iconPath: "/icons/youtube.svg", hoverColor: "#FF0033" },
