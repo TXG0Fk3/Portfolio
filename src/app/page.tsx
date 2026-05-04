@@ -114,9 +114,9 @@ export default function Home() {
           </div>
 
           <div className="relative group">
-            <div className="absolute -inset-1 bg-blue-500 rounded-full blur-xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+            <div className="absolute -inset-1 bg-white rounded-full blur-xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
 
-            <div className="relative w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-zinc-800 bg-zinc-900 shrink-0 shadow-[0_0_20px_rgba(59,130,246,0.15)] group-hover:border-blue-500/50 transition-all duration-500">
+            <div className="relative w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-zinc-800 bg-zinc-900 shrink-0 shadow-[0_0_20px_rgba(59,130,246,0.15)] group-hover:border-white/50 transition-all duration-500">
               <Image
                 src="/PFP.png"
                 alt="Profile Picture"
