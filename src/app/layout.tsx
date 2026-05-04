@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "TXG0Fk3 | Software Developer",
-  description: "Software Developer passionate about .NET, C# and well-structured applications.",
+  description:
+    "Software Developer passionate about .NET, C# and well-structured applications.",
   icons: {
     icon: "/icons/txg0fk3.svg",
   },

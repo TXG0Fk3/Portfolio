@@ -9,12 +9,42 @@ interface SkillCategory {
 }
 
 const socials: SocialLinkProps[] = [
-  { name: "GitHub", url: "https://github.com/TXG0Fk3", iconPath: "/icons/github.svg", hoverColor: "#ffffff" },
-  { name: "Forgejo", url: "https://fgj.txgfk.xyz/TXG0Fk3", iconPath: "/icons/forgejo.svg", hoverColor: "#CC1602" },
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/leoverton-b-xavier-565111307/", iconPath: "/icons/linkedin.svg", hoverColor: "#0077b5" },
-  { name: "Discord", url: "https://discord.com/users/txg0fk3", iconPath: "/icons/discord.svg", hoverColor: "#5662F6" },
-  { name: "Youtube", url: "https://www.youtube.com/@txg0fk3", iconPath: "/icons/youtube.svg", hoverColor: "#FF0033" },
-  { name: "Email", url: "mailto:leovertonx12@outlook.com", iconPath: "/icons/mail.svg", hoverColor: "#ef4444" }
+  {
+    name: "GitHub",
+    url: "https://github.com/TXG0Fk3",
+    iconPath: "/icons/github.svg",
+    hoverColor: "#ffffff",
+  },
+  {
+    name: "Forgejo",
+    url: "https://fgj.txgfk.xyz/TXG0Fk3",
+    iconPath: "/icons/forgejo.svg",
+    hoverColor: "#CC1602",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/leoverton-b-xavier-565111307/",
+    iconPath: "/icons/linkedin.svg",
+    hoverColor: "#0077b5",
+  },
+  {
+    name: "Discord",
+    url: "https://discord.com/users/txg0fk3",
+    iconPath: "/icons/discord.svg",
+    hoverColor: "#5662F6",
+  },
+  {
+    name: "Youtube",
+    url: "https://www.youtube.com/@txg0fk3",
+    iconPath: "/icons/youtube.svg",
+    hoverColor: "#FF0033",
+  },
+  {
+    name: "Email",
+    url: "mailto:leovertonx12@outlook.com",
+    iconPath: "/icons/mail.svg",
+    hoverColor: "#ef4444",
+  },
 ];
 
 const skillCategories: SkillCategory[] = [
@@ -26,26 +56,38 @@ const skillCategories: SkillCategory[] = [
       { name: "C#", iconPath: "/icons/csharp.svg", color: "#7F5CFF" },
       { name: "Rust", iconPath: "/icons/rust.svg", color: "#E43717" },
       { name: "Python", iconPath: "/icons/python.svg", color: "#FFD040" },
-      { name: "TypeScript", iconPath: "/icons/typescript.svg", color: "#007ACC" },
-    ]
+      {
+        name: "TypeScript",
+        iconPath: "/icons/typescript.svg",
+        color: "#007ACC",
+      },
+    ],
   },
   {
     title: "Frameworks & Web",
     items: [
       { name: "Next.js", iconPath: "/icons/nextjs.svg", color: "#FFFFFF" },
-      { name: "Tailwind", iconPath: "/icons/tailwindcss.svg", color: "#38BDF8" },
+      {
+        name: "Tailwind",
+        iconPath: "/icons/tailwindcss.svg",
+        color: "#38BDF8",
+      },
       { name: "HTML", iconPath: "/icons/html5.svg", color: "#E14E1D" },
       { name: "CSS", iconPath: "/icons/css.svg", color: "#0277BD" },
-    ]
+    ],
   },
   {
     title: "Database & Backend",
     items: [
-      { name: "PostgreSQL", iconPath: "/icons/postgresql.svg", color: "#FFFFFF" },
+      {
+        name: "PostgreSQL",
+        iconPath: "/icons/postgresql.svg",
+        color: "#FFFFFF",
+      },
       { name: "SQLite", iconPath: "/icons/sqlite.svg", color: "#007AB5" },
       { name: "MySQL", iconPath: "/icons/mysql.svg", color: "#FFFFFF" },
       { name: "Bun", iconPath: "/icons/bun.svg", color: "#fbf0df" },
-    ]
+    ],
   },
   {
     title: "Dev Environment",
@@ -57,22 +99,24 @@ const skillCategories: SkillCategory[] = [
       { name: "Windows", iconPath: "/icons/windows.svg", color: "#0D89DB" },
       { name: "Git", iconPath: "/icons/git.svg", color: "#F03C2E" },
       { name: "Docker", iconPath: "/icons/docker.svg", color: "#2396ED" },
-    ]
-  }
+    ],
+  },
 ];
 
 const projects: ProjectProps[] = [
   {
     title: "YT Downloader",
-    description: "A program that allows you to download videos, music and playlists from YouTube.",
+    description:
+      "A program that allows you to download videos, music and playlists from YouTube.",
     tags: ["C#", "WinUI 3", "MVVM", "YoutubeExplode"],
-    githubUrl: "https://github.com/TXG0Fk3/YT-Downloader"
+    githubUrl: "https://github.com/TXG0Fk3/YT-Downloader",
   },
   {
     title: "Yukari",
-    description: "A modern, extensible comic and manga reader for Windows. It features a plugin-based architecture for dynamic source integration and a fast, local SQLite-backed library.",
+    description:
+      "A modern, extensible comic and manga reader for Windows. It features a plugin-based architecture for dynamic source integration and a fast, local SQLite-backed library.",
     tags: ["C#", "WinUI 3", "MVVM", "SQLite"],
-    githubUrl: "https://github.com/Yukari-App/Yukari"
+    githubUrl: "https://github.com/Yukari-App/Yukari",
   },
 ];
 
@@ -88,22 +132,38 @@ export default function Home() {
             <span className="text-blue-500">_</span>TXG0Fk3
           </h1>
           <nav className="flex gap-6 text-sm text-zinc-400 font-medium">
-            <a href="#about" className="hover:text-blue-400 transition-colors">About</a>
-            <a href="#skills" className="hover:text-blue-400 transition-colors">Skills</a>
-            <a href="#projects" className="hover:text-blue-400 transition-colors">Projects</a>
+            <a href="#about" className="hover:text-blue-400 transition-colors">
+              About
+            </a>
+            <a href="#skills" className="hover:text-blue-400 transition-colors">
+              Skills
+            </a>
+            <a
+              href="#projects"
+              className="hover:text-blue-400 transition-colors"
+            >
+              Projects
+            </a>
           </nav>
         </div>
       </header>
 
       <div className="max-w-240 mx-auto p-8 pb-12">
-        <section id="about" className="scroll-mt-12 py-10 flex flex-col-reverse md:flex-row items-center gap-10">
+        <section
+          id="about"
+          className="scroll-mt-12 py-10 flex flex-col-reverse md:flex-row items-center gap-10"
+        >
           <div className="flex-1">
             <h2 className="text-4xl sm:text-6xl font-bold mb-4">
               Software Developer <br />
-              <span className="text-zinc-500 text-3xl sm:text-5xl">& .NET Enthusiast.</span>
+              <span className="text-zinc-500 text-3xl sm:text-5xl">
+                & .NET Enthusiast.
+              </span>
             </h2>
             <p className="text-zinc-400 max-w-lg leading-relaxed">
-              I am a Software Developer passionate about building functional and well-structured applications. My main focus is the .NET ecosystem, where I develop desktop solutions using C# and WinUI 3...
+              I am a Software Developer passionate about building functional and
+              well-structured applications. My main focus is the .NET ecosystem,
+              where I develop desktop solutions using C# and WinUI 3...
             </p>
 
             <div className="flex gap-4 mt-8">
@@ -155,10 +215,7 @@ export default function Home() {
           </h3>
           <div className="flex flex-col gap-2">
             {projects.map((project) => (
-              <ProjectCard
-                key={project.title}
-                {...project}
-              />
+              <ProjectCard key={project.title} {...project} />
             ))}
           </div>
         </section>
