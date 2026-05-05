@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SocialLink, SocialLinkProps } from "@/components/SocialLinks";
+import { SocialLink, SocialLinkProps } from "@/components/SocialLink";
 import { SkillBadge, SkillBadgeProps } from "@/components/SkillBadge";
 import { ProjectCard, ProjectProps } from "@/components/ProjectCard";
 import { Divider } from "@/components/Divider";
