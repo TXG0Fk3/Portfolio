@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export interface ProjectProps {
   title: string;
   description: string;
@@ -28,7 +26,7 @@ export function ProjectCard({
   };
 
   return (
-    <Link
+    <a
       href={githubUrl}
       target="_blank"
       rel="noopener noreferrer"
@@ -85,6 +83,6 @@ export function ProjectCard({
           ))}
         </div>
       </div>
-    </Link>
+    </a>
   );
 }
